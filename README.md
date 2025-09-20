@@ -1,4 +1,4 @@
-# Master Thesis – Vision-based dynamic obstacle detection and tracking for mobile robots
+# Vision-based dynamic obstacle detection and tracking for mobile robots
 
 ## Focus of Work
 
