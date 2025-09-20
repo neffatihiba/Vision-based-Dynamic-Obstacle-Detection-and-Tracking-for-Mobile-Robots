@@ -1,0 +1,41 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/home/hiba/clearpath_ws/build/yolo_ros",
+        "/home/hiba/clearpath_ws/install/yolo_ros/lib/python3.10/site-packages",
+        "/home/hiba/clearpath_ws/build/l2i_fusion_detection",
+        "/home/hiba/clearpath_ws/install/l2i_fusion_detection/lib/python3.10/site-packages",
+        "/home/hiba/clearpath_ws/install/yolo_msgs/local/lib/python3.10/dist-packages",
+        "/home/hiba/clearpath_ws/build/ros2_camera_lidar_fusion",
+        "/home/hiba/clearpath_ws/install/ros2_camera_lidar_fusion/lib/python3.10/site-packages",
+        "/home/hiba/clearpath_ws/build/my-test-package",
+        "/home/hiba/clearpath_ws/install/my-test-package/lib/python3.10/site-packages",
+        "/home/hiba/clearpath_ws/install/clearpath_generator_gz/local/lib/python3.10/dist-packages",
+        "/home/hiba/clearpath_ws/install/clearpath_config_live/local/lib/python3.10/dist-packages",
+        "/home/hiba/clearpath_ws/install/clearpath_generator_common/local/lib/python3.10/dist-packages",
+        "/home/hiba/clearpath_ws/build/clearpath_config",
+        "/home/hiba/clearpath_ws/install/clearpath_config/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/home/hiba/clearpath_ws/build/yolo_ros",
+        "/home/hiba/clearpath_ws/install/yolo_ros/lib/python3.10/site-packages",
+        "/home/hiba/clearpath_ws/build/l2i_fusion_detection",
+        "/home/hiba/clearpath_ws/install/l2i_fusion_detection/lib/python3.10/site-packages",
+        "/home/hiba/clearpath_ws/install/yolo_msgs/local/lib/python3.10/dist-packages",
+        "/home/hiba/clearpath_ws/build/ros2_camera_lidar_fusion",
+        "/home/hiba/clearpath_ws/install/ros2_camera_lidar_fusion/lib/python3.10/site-packages",
+        "/home/hiba/clearpath_ws/build/my-test-package",
+        "/home/hiba/clearpath_ws/install/my-test-package/lib/python3.10/site-packages",
+        "/home/hiba/clearpath_ws/install/clearpath_generator_gz/local/lib/python3.10/dist-packages",
+        "/home/hiba/clearpath_ws/install/clearpath_config_live/local/lib/python3.10/dist-packages",
+        "/home/hiba/clearpath_ws/install/clearpath_generator_common/local/lib/python3.10/dist-packages",
+        "/home/hiba/clearpath_ws/build/clearpath_config",
+        "/home/hiba/clearpath_ws/install/clearpath_config/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "ros.distro": "humble"
+}

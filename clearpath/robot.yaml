@@ -1,0 +1,102 @@
+serial_number: a200-0846
+version: 0
+system:
+  username: administrator
+  hosts:
+    - hostname: cpr-a200-0846
+      ip: 192.168.131.1
+  ros2:
+    namespace: a200_0846
+    domain_id: 0
+    rmw_implementation: rmw_fastrtps_cpp
+    workspaces: []
+platform:
+  controller: ps4
+  battery:
+    model: ES20_12C
+    configuration: S2P1
+  attachments:
+    - name: front_bumper
+      type: bumper
+      parent: front_bumper_mount
+    - name: rear_bumper
+      type: bumper
+      parent: rear_bumper_mount
+    - name: top_plate
+      type: a200.top_plate
+      model: default
+      parent: default_mount
+      enabled: true
+    # modifed the intitial urdf in the default path, or the top_plate laocation is wrong.
+    #/opt/ros/humble/share/clearpath_platform_description/urdf/a200/attachments.
+  extras:
+    urdf: {}
+    # urdf: 
+    #   package: project_description
+    #   path: urdf/rplidar_husky.urdf.xacro
+
+    # launch:
+    #   package: project_bringup
+    #   path: launch/extra_bringup.launch.py
+    ros_parameters:
+      platform_velocity_controller:
+        linear.x.max_velocity": 1.0
+        linear.x.min_velocity": -1.0
+        linear.x.max_acceleration": 3.0
+        linear.x.min_acceleration": -3.0
+        angular.z.max_velocity": 2.0
+        angular.z.min_velocity": -2.0
+        angular.z.max_acceleration": 6.0
+        angular.z.min_acceleration": -6.0
+links:
+  box: []
+  cylinder: []
+  frame: []
+  mesh: []
+  sphere: []
+mounts:
+  bracket: []
+  fath_pivot: []
+  riser: []
+  disk: []
+  post: []
+sensors:
+  camera:
+   - model: intel_realsense
+     urdf_enabled: true
+     launch_enabled: true
+     parent: top_plate_rear_mount
+     xyz: [0.65, 0.0, 0.126]
+     rpy: [0.0, 0.0, 0.0]
+     ros_parameters:
+       camera:
+         camera_name: camera_d435
+         device_type: d435
+         serial_no: '0'
+         enable_color: true
+         rgb_camera.profile: 640,480,30
+         enable_depth: true
+         depth_module.profile: 640,480,30
+         pointcloud.enable: true
+
+  imu:
+   - model: redshift_um7
+     urdf_enabled: true
+     launch_enabled: true
+     parent: base_link
+     xyz: [0.0, -0.15, 0.065]
+     rpy: [3.1415, 0.0, 0.0]
+     ros_parameters:
+       um7_driver:
+         port: /dev/clearpath/imu
+         frame_id: imu_link
+         tf_ned_to_enu: true
+  lidar2d:
+   - model: sick_lms1xx
+     urdf_enabled: true
+     launch_enabled: true
+     parent: top_plate_rear_mount
+     xyz: [0.6, 0.0, 0.0]
+     rpy: [0.0, 0.0, 0.0]
+  lidar3d: []
+  

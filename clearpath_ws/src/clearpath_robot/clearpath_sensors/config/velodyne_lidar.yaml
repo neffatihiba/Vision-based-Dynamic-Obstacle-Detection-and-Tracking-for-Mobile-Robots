@@ -1,0 +1,27 @@
+velodyne_transform_node:
+  ros__parameters:
+    calibration: /opt/ros/jazzy/share/velodyne_pointcloud/params/VLP16db.yaml
+    max_range: 130.0
+    min_range: 0.9
+    organize_cloud: true
+    view_direction: 0.0
+    model: VLP16
+    fixed_frame: velodyne
+    target_frame: velodyne
+velodyne_driver_node:
+  ros__parameters:
+    device_ip: 192.168.131.25
+    enabled: true
+    frame_id: velodyne
+    gps_time: false
+    model: VLP16
+    port: 2368
+    read_fast: false
+    read_once: false
+    repeat_delay: 0.0
+    rpm: 600.0
+    time_offset: 0.0
+velodyne_laserscan_node:
+  ros__parameters:
+    resolution: 0.007
+    ring: -1

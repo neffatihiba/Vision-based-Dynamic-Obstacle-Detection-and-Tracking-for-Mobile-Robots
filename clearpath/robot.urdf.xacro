@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="a200-0846">
+
+  <!-- Common -->
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/common.urdf.xacro"/>
+
+  <!-- Platform -->
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a200/a200.urdf.xacro"/>
+  <xacro:a200 wheel="default"/>
+
+
+  <!-- Attachments -->
+
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a200/attachments/bumper.urdf.xacro"/>
+  <xacro:bumper name="front_bumper" model="default" parent_link="front_bumper_mount" extension="0.0">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:bumper>
+
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a200/attachments/bumper.urdf.xacro"/>
+  <xacro:bumper name="rear_bumper" model="default" parent_link="rear_bumper_mount" extension="0.0">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:bumper>
+
+  <xacro:include filename="$(find clearpath_platform_description)/urdf/a200/attachments/top_plate.urdf.xacro"/>
+  <xacro:top_plate name="top_plate" model="default" parent_link="default_mount">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:top_plate>
+
+
+  <!-- Links -->
+
+
+  <!-- Mounts -->
+
+
+  <!-- Sensors -->
+
+  <!-- lidar2d_0 -->
+  <xacro:include filename="$(find clearpath_sensors_description)/urdf/sick_lms1xx.urdf.xacro"/>
+  <xacro:sick_lms1xx name="lidar2d_0" parent_link="top_plate_rear_mount" ang_res="0.5" min_ang="-2.391" max_ang="2.391" min_range="0.05" max_range="25.0" update_rate="50">
+    <origin xyz="0.6 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:sick_lms1xx>
+
+  <!-- camera_0 -->
+  <xacro:include filename="$(find clearpath_sensors_description)/urdf/intel_realsense.urdf.xacro"/>
+  <xacro:intel_realsense name="camera_0" parent_link="top_plate_rear_mount" update_rate="30" image_height="480" image_width="640">
+    <origin xyz="0.65 0.0 0.126" rpy="0.0 0.0 0.0"/>
+  </xacro:intel_realsense>
+
+  <!-- imu_0 -->
+  <xacro:include filename="$(find clearpath_sensors_description)/urdf/redshift_um7.urdf.xacro"/>
+  <xacro:redshift_um7 name="imu_0" parent_link="base_link" update_rate="100">
+    <origin xyz="0.0 -0.15 0.065" rpy="3.1415 0.0 0.0"/>
+  </xacro:redshift_um7>
+
+
+  <!-- Manipulators -->
+
+
+  <!-- Extras -->
+
+
+</robot>

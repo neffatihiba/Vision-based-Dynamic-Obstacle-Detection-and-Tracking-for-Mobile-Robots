@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- RPlidar Link -->
+
+  <link name="rplidar_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://project_description/meshes/rplidar.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin xyz="0.05 0 0.015" rpy="1.57 0.0 0.0"/>
+      <material name="clearpath_black"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://project_description/meshes/rplidar.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin xyz="0.05 0 0.015" rpy="1.57 0.0 0.0"/>
+    </collision>
+  </link>
+
+  <joint name="rplidar_joint" type="fixed">
+    <parent link="top_plate_rear_mount"/>
+    <child link="rplidar_link"/>
+    <origin xyz="0.67 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  
+</robot>

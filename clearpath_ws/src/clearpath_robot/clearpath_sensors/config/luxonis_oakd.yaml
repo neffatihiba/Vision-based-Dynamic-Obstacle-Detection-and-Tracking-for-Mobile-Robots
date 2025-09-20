@@ -1,0 +1,22 @@
+luxonis_oakd:
+  ros__parameters:
+    camera:
+      i_enable_imu: false
+      i_enable_ir: false
+      i_floodlight_brightness: 0
+      i_laser_dot_brightness: 100
+      i_nn_type: none
+      i_pipeline_type: RGBD
+      i_usb_speed: SUPER_PLUS
+      i_usb_port_id: ''
+    rgb:
+      i_board_socket_id: 0
+      i_fps: 30.0
+      i_height: 720
+      i_width: 1280
+      i_max_q_size: 10
+    stereo:
+      i_fps: 30.0
+      i_height: 720
+      i_width: 1280
+    use_sim_time: false

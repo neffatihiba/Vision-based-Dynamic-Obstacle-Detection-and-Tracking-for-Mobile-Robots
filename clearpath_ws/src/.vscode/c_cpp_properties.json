@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/hiba/clearpath_ws/install/costmap_depth_camera/include/**",
+        "/home/hiba/clearpath_ws/install/pointcloud_to_laserscan/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/hiba/clearpath_ws/src/costmap_depth_camera/include/**",
+        "/home/hiba/clearpath_ws/src/pointcloud_to_laserscan/include/**",
+        "/home/hiba/clearpath_ws/src/project_bringup/include/**",
+        "/home/hiba/clearpath_ws/src/project_description/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
