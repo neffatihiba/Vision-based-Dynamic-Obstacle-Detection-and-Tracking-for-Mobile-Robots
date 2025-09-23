@@ -153,6 +153,13 @@ ros2 run tf2_tools view_frames --ros-args \
 ```
 
 ---
+## Demos
+
+### LiDAR–Camera Fusion
+![Fusion Demo](media/demo_fusion.gif)
+
+### Navigation with Dynamic Obstacle Avoidance
+![Navigation Demo](media/demo_navigation.gif)
 
 ## Notes
 
