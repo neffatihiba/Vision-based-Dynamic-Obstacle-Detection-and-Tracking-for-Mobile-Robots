@@ -159,7 +159,7 @@ ros2 run tf2_tools view_frames --ros-args \
 ![Fusion Demo](media/demo_fusion.gif)
 
 ### Navigation with Dynamic Obstacle Avoidance
-![Navigation Demo](demo_navigation (1).gif)
+![Navigation Demo](demo_navigation.gif)
 
 ## Notes
 
